@@ -1,0 +1,19 @@
+#coding:utf-8
+
+from PIL import Image
+import os
+import time
+curPath = os.path.split(os.path.realpath(__file__))[0]
+
+picList =[
+"04.jpG",
+    "50.jpG",
+    "52.gif"
+]
+while (1):
+    for picName in picList:
+        destPath = os.path.join(curPath,"pic","xun",picName)
+        im = Image.open(destPath)
+        im.show()
+        time.sleep(5)
+        im.close()
